@@ -66,7 +66,7 @@ local function SpawnWeedPlants()
 		while not HasModelLoaded(`mw_weed_plant`) do
 			Wait(100)
 		end
-		local obj = CreateObject(`mw_weed_plant`, weedCoords.x, weedCoords.y, weedCoords.z, true, true, false)
+		local obj = CreateObject(`mw_weed_plant`, weedCoords.x, weedCoords.y, weedCoords.z, false, true, false)
 		PlaceObjectOnGroundProperly(obj)
 		FreezeEntityPosition(obj, true)
 		table.insert(weedPlants, obj)
@@ -194,7 +194,7 @@ RegisterNetEvent('ps-drugprocessing:client:rollJoint', function()
 end)
 
 CreateThread(function()
-	local weedZone = CircleZone:Create(Config.CircleZones.WeedField.coords, 50.0, {
+	local weedZone = CircleZone:Create(Config.CircleZones.WeedField.coords, 10.0, {
 		name = "ps-weedzone",
 		debugPoly = false
 	})

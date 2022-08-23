@@ -142,7 +142,7 @@ local function SpawnCocaPlants()
 		while not HasModelLoaded(`mw_coke_plant`) do
 			Wait(100)
 		end
-		local obj = CreateObject(`mw_coke_plant`, weedCoords.x, weedCoords.y, weedCoords.z, true, true, false)
+		local obj = CreateObject(`mw_coke_plant`, weedCoords.x, weedCoords.y, weedCoords.z, false, true, false)
 		PlaceObjectOnGroundProperly(obj)
 		FreezeEntityPosition(obj, true)
 		table.insert(CocaPlants, obj)
@@ -357,7 +357,7 @@ RegisterCommand('propfix', function()
 end)
 
 CreateThread(function()
-	local cokeZone = CircleZone:Create(Config.CircleZones.CokeField.coords, 50.0, {
+	local cokeZone = CircleZone:Create(Config.CircleZones.CokeField.coords, 10.0, {
 		name = "ps-cokezone",
 		debugPoly = false
 	})
