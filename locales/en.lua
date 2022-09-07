@@ -1,5 +1,6 @@
 local Translations = {
     error = {
+        no_item = 'You are missing %{item}!',
         no_chemicals = "You are missing chemicals!",
         no_trimming_scissors = "You'll need trimming scissors for that!",
         no_coca_leaf = "You need cocaine leaves!",
@@ -14,8 +15,8 @@ local Translations = {
         no_lsa = "You are missing LSA!",
         no_thionyl_chloride = "You are missing thionyl chloride!",
         too_far = "Processing was canceled because you left the area!",
-        no_sulfuric_acid = "You are missing hydrochloric acid!",
-        no_hydrochloric_acid = "You are missing sulfuric acid!",
+        no_sulfuric_acid = "You are missing sulfuric acid!",
+        no_hydrochloric_acid = "You are missing hydrochloric acid!",
         no_sodium_hydroxide = "You are missing sodium hydroxide!",
         no_liquidmix = "You are missing liquid chemical mixture!",
         no_chemicalvapor = "You are missing chemical vapors!",
